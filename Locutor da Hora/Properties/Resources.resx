@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Exception_IniciarGravacao" xml:space="preserve">
+    <value>Erro ao iniciar gravação.</value>
+  </data>
+  <data name="Exception_InterromperGravacao" xml:space="preserve">
+    <value>Erro ao interromper gravação.</value>
+  </data>
+  <data name="Exception_ExportarAudio" xml:space="preserve">
+    <value>Erro ao salvar arquivo, tente novamente.</value>
+  </data>
+  <data name="Exception_ResolucaoNaoSuportada" xml:space="preserve">
+    <value>A resolução do seu monitor está muito baixa. Para funcionar corretamente o Locutor da Hora precisa de pelo menos 1024x768px.</value>
+  </data>
+  <data name="Exception_SemMicrofone" xml:space="preserve">
+    <value>Não encontramos um microfone em seu computador. As funcionalidades de gravação foram desativadas. Conecte um microfone e reinicie o aplicativo.</value>
+  </data>
+  <data name="NomeAplicacao" xml:space="preserve">
+    <value>Locutor da Hora</value>
+  </data>
+  <data name="Dialog_Filter_MP3" xml:space="preserve">
+    <value>Arquivos MP3 | *.MP3</value>
+  </data>
+  <data name="Dialog_SelecionarAudio" xml:space="preserve">
+    <value>Selecione um arquivo de áudio</value>
+  </data>
+  <data name="Exception_ArquivoInvalido" xml:space="preserve">
+    <value>Tipo de arquivo não suportado!</value>
+  </data>
+  <data name="Arquivo_Locucoes" xml:space="preserve">
+    <value>locucoes.bin</value>
+  </data>
+  <data name="Dialog_Filter_PNG" xml:space="preserve">
+    <value>Imagens PNG | *.png</value>
+  </data>
+  <data name="Dialog_SelecionarIcone" xml:space="preserve">
+    <value>Selecione um arquivo de imagem</value>
+  </data>
+  <data name="Exception_ExcluirIcone" xml:space="preserve">
+    <value>Não foi possível excluir o Ícone!</value>
+  </data>
+  <data name="Exception_ExcluirTrilha" xml:space="preserve">
+    <value>Não foi possível excluir a Trilha Sonora!</value>
+  </data>
+  <data name="Exception_SalvarLocucoes" xml:space="preserve">
+    <value>Erro ao salvar Locuções!</value>
+  </data>
+  <data name="Locucao_Adicionar" xml:space="preserve">
+    <value>Adicionar Locução</value>
+  </data>
+  <data name="Titulo_AdicionarLocucao" xml:space="preserve">
+    <value>ADICIONAR LOCUÇÃO</value>
+  </data>
+  <data name="Titulo_EditarLocucao" xml:space="preserve">
+    <value>EDITAR LOCUÇÃO</value>
+  </data>
+  <data name="Titulo_NovaLocucao" xml:space="preserve">
+    <value>Nova Locução</value>
+  </data>
+  <data name="Validation_Cidade" xml:space="preserve">
+    <value>Por favor, informe sua cidade.</value>
+  </data>
+  <data name="Validation_Email" xml:space="preserve">
+    <value>Informando seu e-mail você poderá optar por receber uma mensagem com sua participação no Locutor da Hora! Não se preocupe, não enviaremos spam.</value>
+  </data>
+  <data name="Validation_Nome" xml:space="preserve">
+    <value>Por favor, informe seu nome.</value>
+  </data>
+  <data name="Validation_Radio" xml:space="preserve">
+    <value>Por favor, informe a instituição que você faz parte, seja como estudante ou profissional.</value>
+  </data>
+  <data name="Validation_UF" xml:space="preserve">
+    <value>Por favor, informe o estado em que você reside.</value>
+  </data>
+  <data name="PastaTemporaria_MP3" xml:space="preserve">
+    <value>\Gravações</value>
+  </data>
+</root>

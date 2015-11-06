@@ -1,0 +1,114 @@
+﻿<Page x:Class="Locutor_da_Hora.Pages.SelecaoLocucao"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="clr-namespace:Locutor_da_Hora.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      MinWidth="1024"
+      MinHeight="768"
+      d:DesignHeight="768"
+      d:DesignWidth="1024"
+      mc:Ignorable="d">
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Locutor da Hora;component/Resources/Background/imgSeleçãoDePadrão.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+
+        <!--  Border + Frame  -->
+        <Border Margin="120,63,120,225"
+                BorderThickness="1"
+                CornerRadius="30">
+            <Border.Background>
+                <SolidColorBrush Opacity="0.7" Color="GhostWhite" />
+            </Border.Background>
+            <Frame x:Name="FramePrincipal" Visibility="Visible" />
+        </Border>
+
+        <!--  Botões Up/Down  -->
+        <Grid Width="50"
+              Height="110"
+              Margin="0,63,50,225"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Center"
+              Visibility="{Binding Path=PodeScroll,
+                                   Converter={StaticResource BoolToVis}}">
+            <Button x:Name="BtSubir"
+                    Width="50"
+                    Height="50"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    BorderBrush="{x:Null}"
+                    Click="BtSubir_Click"
+                    Foreground="{x:Null}"
+                    Style="{StaticResource ImageButton}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Locutor da Hora;component/Resources/Botões de Navegação/btnSubir.png" />
+                </Button.Background>
+            </Button>
+            <Button x:Name="BtBaixar"
+                    Width="50"
+                    Height="50"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    BorderBrush="{x:Null}"
+                    Click="BtBaixar_Click"
+                    Foreground="{x:Null}"
+                    Style="{StaticResource ImageButton}">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Locutor da Hora;component/Resources/Botões de Navegação/btnBaixar.png" />
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <!--  Botão Voltar  -->
+        <controls:MenuButton x:Name="BtVoltar"
+                             Margin="120,0,0,50"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Bottom"
+                             Click="BtVoltar_Click"
+                             Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnVoltar.png"
+                             Text="Voltar"
+                             Visibility="{Binding Path=PodeEditar,
+                                                  Converter={StaticResource BoolToVis}}" />
+
+
+        <!--  Botão Editar Padrão de Gravação  -->
+        <controls:MenuButton x:Name="BtEditarLocucoes"
+                             Margin="0,0,0,50"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Bottom"
+                             Click="BtEditarLocucoes_Click"
+                             Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnEditarPadrao.png"
+                             Text="Editar Locuções"
+                             Visibility="{Binding Path=PodeEditar,
+                                                  Converter={StaticResource BoolToVis}}" />
+
+        <!--  Botão Interromper Edição de Padrão de Gravação  -->
+        <controls:MenuButton x:Name="BtnInterromperEdicao"
+                             Margin="0,0,0,50"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Bottom"
+                             Click="BtnGridinterromperEdicao_Click"
+                             Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnInterromperEdicao.png"
+                             Text="Interromper Edição"
+                             Visibility="{Binding Path=PodeCancelarEdicao,
+                                                  Converter={StaticResource BoolToVis},
+                                                  FallbackValue=Hidden}" />
+
+        <!--  Botão Configurações  -->
+        <controls:MenuButton x:Name="BtConfiguracoes"
+                             Margin="0,0,120,50"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Bottom"
+                             Click="BtConfiguracoes_Click"
+                             Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnConfiguracoes.png"
+                             Text="Configurações"
+                             Visibility="{Binding Path=PodeConfigurar,
+                                                  Converter={StaticResource BoolToVis}}" />
+
+
+    </Grid>
+</Page>

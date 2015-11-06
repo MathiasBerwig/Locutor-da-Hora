@@ -1,0 +1,224 @@
+﻿<UserControl x:Class="Locutor_da_Hora.Controls.LoadingSpinner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Name="UserControl"
+             Width="128"
+             Height="128"
+             d:DesignHeight="128"
+             d:DesignWidth="128"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Storyboard x:Key="spinner"
+                    BeginTime="00:00:00"
+                    RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse01"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse12"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="1" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse11"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="0.5" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse02"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse03"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse04"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse05"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse06"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.4000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse07"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.5000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse08"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.6000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse09"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0.25" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00"
+                                           Storyboard.TargetName="ellipse10"
+                                           Storyboard.TargetProperty="(UIElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.8000000" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.9000000" Value="1" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="0.5" />
+                <EasingDoubleKeyFrame KeyTime="00:00:01.1000000" Value="0.25" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource spinner}" />
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Canvas x:Name="spinner_1"
+            Width="128"
+            Height="128"
+            Margin="0">
+        <Ellipse x:Name="ellipse01"
+                 Canvas.Top="57.5"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse07"
+                 Canvas.Left="115"
+                 Canvas.Top="57.5"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse04"
+                 Canvas.Left="57.5"
+                 Canvas.Top="0"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse10"
+                 Canvas.Left="57.5"
+                 Canvas.Top="115"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse12"
+                 Canvas.Left="8.05"
+                 Canvas.Top="86.25"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse03"
+                 Canvas.Left="28.75"
+                 Canvas.Top="8.05"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse11"
+                 Canvas.Left="28.75"
+                 Canvas.Top="107.296"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse02"
+                 Canvas.Left="7.704"
+                 Canvas.Top="28.75"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse05"
+                 Canvas.Left="86.25"
+                 Canvas.Top="8.05"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse09"
+                 Canvas.Left="86.25"
+                 Canvas.Top="107.296"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse06"
+                 Canvas.Left="107.297"
+                 Canvas.Top="28.75"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+        <Ellipse x:Name="ellipse08"
+                 Canvas.Left="107.525"
+                 Canvas.Top="86.25"
+                 Width="23"
+                 Height="23"
+                 Fill="White"
+                 Opacity="0" />
+    </Canvas>
+</UserControl>

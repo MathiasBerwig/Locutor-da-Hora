@@ -41,7 +41,7 @@ namespace Locutor_da_Hora.Audio
         public int SelectedWaveInDevice
         {
             get { return selectedWaveInDevice; }
-            set { selectedWaveInDevice = value; NotifyPropertyChanged("SelectedWaveInDevice"); }
+            set { selectedWaveInDevice = value; NotifyPropertyChanged(nameof(SelectedWaveInDevice)); }
         }
 
         public List<string> WaveInDevicesName
@@ -114,7 +114,7 @@ namespace Locutor_da_Hora.Audio
                 WaveInDevicesName.Add(deviceInfo.ProductName);                
             }
 
-            NotifyPropertyChanged("WaveInDevicesName");
+            NotifyPropertyChanged(nameof(WaveInDevicesName));
 
             return WaveInDevicesName.Count;
         }
@@ -123,7 +123,7 @@ namespace Locutor_da_Hora.Audio
         #region INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void NotifyPropertyChanged(String info)
+        private void NotifyPropertyChanged(string info)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(info));
         }

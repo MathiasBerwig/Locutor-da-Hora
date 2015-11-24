@@ -61,37 +61,37 @@ namespace Locutor_da_Hora.Audio
         public WaveStream ActiveStream
         {
             get { return activeStream; }
-            protected set { SetField(ref activeStream, value, "ActiveStream"); }
+            protected set { SetField(ref activeStream, value, nameof(ActiveStream)); }
         }
 
         public bool CanPlay
         {
             get { return canPlay; }
-            protected set { SetField(ref canPlay, value, "CanPlay"); }
+            protected set { SetField(ref canPlay, value, nameof(CanPlay)); }
         }
 
         public bool CanPause
         {
             get { return canPause; }
-            protected set { SetField(ref canPause, value, "CanPause"); }
+            protected set { SetField(ref canPause, value, nameof(CanPause)); }
         }
 
         public bool CanStop
         {
             get { return canStop; }
-            protected set { SetField(ref canStop, value, "CanStop"); }
+            protected set { SetField(ref canStop, value, nameof(CanStop)); }
         }
 
         public bool CanCut
         {
             get { return canCut; }
-            protected set { SetField(ref canCut, value, "CanCut"); }
+            protected set { SetField(ref canCut, value, nameof(CanCut)); }
         }
 
         public bool CanExport
         {
             get { return canExport; }
-            protected set { SetField(ref canExport, value, "CanExport"); }
+            protected set { SetField(ref canExport, value, nameof(CanExport)); }
         }
 
         public bool IsPlaying
@@ -99,7 +99,7 @@ namespace Locutor_da_Hora.Audio
             get { return isPlaying; }
             protected set
             {
-                SetField(ref isPlaying, value, "IsPlaying");
+                SetField(ref isPlaying, value, nameof(IsPlaying));
                 positionTimer.IsEnabled = value;
             }
         }
@@ -107,13 +107,13 @@ namespace Locutor_da_Hora.Audio
         public bool IsGeneratingWaveForm
         {
             get { return isGeneratingWaveForm; }
-            protected set { SetField(ref isGeneratingWaveForm, value, "IsGeneratingWaveForm"); }
+            protected set { SetField(ref isGeneratingWaveForm, value, nameof(IsGeneratingWaveForm)); }
         }
 
         public float Volume
         {
             get { return inputStream?.Volume ?? 0; }
-            set { if (inputStream != null) inputStream.Volume = value; OnPropertyChanged("Volume"); }
+            set { if (inputStream != null) inputStream.Volume = value; OnPropertyChanged(nameof(Volume)); }
         }
 
         public string FileName => fileName;
@@ -207,7 +207,7 @@ namespace Locutor_da_Hora.Audio
 
         public void OpenFile(string filePath)
         {
-            SetField(ref fileName, filePath, "FileName");
+            SetField(ref fileName, filePath, nameof(FileName));
 
             ClearSelection();
             StopAndCloseStream();
@@ -227,7 +227,7 @@ namespace Locutor_da_Hora.Audio
 
                 CanPlay = true;
                 CanExport = true;
-                OnPropertyChanged("Volume");
+                OnPropertyChanged(nameof(Volume));
             }
             catch
             {
@@ -420,7 +420,7 @@ namespace Locutor_da_Hora.Audio
             {
                 if (inRepeatSet) return;
                 inRepeatSet = true;
-                SetField(ref repeatStart, value, "SelectionBegin");
+                SetField(ref repeatStart, value, nameof(SelectionBegin));
                 CanCut = SelectionBegin < SelectionEnd;
                 inRepeatSet = false;
             }
@@ -433,7 +433,7 @@ namespace Locutor_da_Hora.Audio
             {
                 if (inRepeatSet) return;
                 inRepeatSet = true;
-                SetField(ref repeatStop, value, "SelectionEnd");
+                SetField(ref repeatStop, value, nameof(SelectionEnd));
                 CanCut = SelectionBegin < SelectionEnd;
                 inRepeatSet = false;
             }
@@ -442,13 +442,13 @@ namespace Locutor_da_Hora.Audio
         public float[] WaveformData
         {
             get { return waveformData; }
-            protected set { SetField(ref waveformData, value, "WaveformData"); }
+            protected set { SetField(ref waveformData, value, nameof(WaveformData)); }
         }
 
         public double ChannelLength
         {
             get { return channelLength; }
-            protected set { SetField(ref channelLength, value, "ChannelLength"); }
+            protected set { SetField(ref channelLength, value, nameof(ChannelLength)); }
         }
 
         public double ChannelPosition
@@ -461,7 +461,7 @@ namespace Locutor_da_Hora.Audio
                 double position = Math.Max(0, Math.Min(value, ChannelLength));
                 if (!inChannelTimerUpdate && ActiveStream != null)
                     ActiveStream.Position = (long)((position / ActiveStream.TotalTime.TotalSeconds) * ActiveStream.Length);
-                SetField(ref channelPosition, value, "ChannelPosition");
+                SetField(ref channelPosition, value, nameof(ChannelPosition));
                 inChannelSet = false;
             }
         }

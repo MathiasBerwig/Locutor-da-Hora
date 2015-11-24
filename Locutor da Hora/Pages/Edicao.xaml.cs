@@ -51,7 +51,7 @@ namespace Locutor_da_Hora.Pages
         public NAudioEngine EngineAtivo
         {
             get { return engineAtivo; }
-            set { SetField(ref engineAtivo, value, "EngineAtivo"); }
+            set { SetField(ref engineAtivo, value, nameof(EngineAtivo)); }
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Locutor_da_Hora.Pages
         public bool PodeGravarNovamente
         {
             get { return podeGravarNovamente; }
-            set { SetField(ref podeGravarNovamente, value, "PodeGravarNovamente"); }
+            set { SetField(ref podeGravarNovamente, value, nameof(PodeGravarNovamente)); }
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ namespace Locutor_da_Hora.Pages
         public bool Processando
         {
             get { return processando; }
-            set { SetField(ref processando, value, "Processando"); }
+            set { SetField(ref processando, value, nameof(Processando)); }
         }
         #endregion
 
@@ -141,7 +141,7 @@ namespace Locutor_da_Hora.Pages
             });
         }
 
-        private void BtInicio_Click(object sender, RoutedEventArgs e)
+        private void BtVoltarInicio_Click(object sender, RoutedEventArgs e)
         {
             // Navega o Frame para a página Boas Vindas
             MainWindow.Instance.AbrirPagina(BoasVindas.Instance);

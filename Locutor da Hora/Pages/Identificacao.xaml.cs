@@ -43,13 +43,13 @@ namespace Locutor_da_Hora.Pages
         public Usuario Usuario
         {
             get { return usuario; }
-            set { SetField(ref usuario, value, "Usuario"); }
+            set { SetField(ref usuario, value, nameof(Usuario)); }
         }
 
         public bool PodeAvancar
         {
             get { return podeAvancar; }
-            set { SetField(ref podeAvancar, value, "PodeAvancar"); }
+            set { SetField(ref podeAvancar, value, nameof(PodeAvancar)); }
         }
         #endregion
 

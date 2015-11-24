@@ -50,7 +50,7 @@ namespace Locutor_da_Hora.Pages
         public bool PodeScroll
         {
             get { return podeScroll; }
-            set { SetField(ref podeScroll, value, "PodeScroll"); }
+            set { SetField(ref podeScroll, value, nameof(PodeScroll)); }
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Locutor_da_Hora.Pages
         public bool PodeEditar
         {
             get { return podeEditar; }
-            set { SetField(ref podeEditar, value, "PodeEditar"); }
+            set { SetField(ref podeEditar, value, nameof(PodeEditar)); }
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Locutor_da_Hora.Pages
         public bool PodeCancelarEdicao
         {
             get { return podeCancelarEdicao; }
-            set { SetField(ref podeCancelarEdicao, value, "PodeCancelarEdicao"); }
+            set { SetField(ref podeCancelarEdicao, value, nameof(PodeCancelarEdicao)); }
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace Locutor_da_Hora.Pages
         public bool PodeConfigurar
         {
             get { return podeConfigurar; }
-            set { SetField(ref podeConfigurar, value, "PodeConfigurar"); }
+            set { SetField(ref podeConfigurar, value, nameof(PodeConfigurar)); }
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Locutor_da_Hora.Pages
         public bool PodeExcluir
         {
             get { return podeExcluir; }
-            set { SetField(ref podeExcluir, value, "PodeExcluir"); }
+            set { SetField(ref podeExcluir, value, nameof(PodeExcluir)); }
         }
 
         #endregion

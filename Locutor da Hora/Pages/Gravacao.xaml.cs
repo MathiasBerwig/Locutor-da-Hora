@@ -50,7 +50,7 @@ namespace Locutor_da_Hora.Pages
             get { return locucao; }
             set
             {
-                SetField(ref locucao, value, "Locucao");
+                SetField(ref locucao, value, nameof(Locucao));
                 var trilhaSonoraExists = File.Exists(locucao.LocalTrilhaSonora);
                 // Carrega a Trilha Sonora na Engine de Reprodução
                 if (trilhaSonoraExists) EngineTrilhaSonora.OpenFile(locucao.LocalTrilhaSonora);
@@ -64,25 +64,25 @@ namespace Locutor_da_Hora.Pages
         public bool PodeVoltar
         {
             get { return podeVoltar; }
-            set { SetField(ref podeVoltar, value, "PodeVoltar"); }
+            set { SetField(ref podeVoltar, value, nameof(PodeVoltar)); }
         }
 
         public bool PodeGravar
         {
             get { return podeGravar; }
-            set { SetField(ref podeGravar, value, "PodeGravar"); }
+            set { SetField(ref podeGravar, value, nameof(PodeGravar)); }
         }
 
         public bool PodeInterromperGravacao
         {
             get { return podeInterromperGravacao; }
-            set { SetField(ref podeInterromperGravacao, value, "PodeInterromperGravacao"); }
+            set { SetField(ref podeInterromperGravacao, value, nameof(PodeInterromperGravacao)); }
         }
 
         public bool PodeAvancar
         {
             get { return podeAvancar; }
-            set { SetField(ref podeAvancar, value, "PodeAvancar"); }
+            set { SetField(ref podeAvancar, value, nameof(PodeAvancar)); }
         }
         #endregion
 

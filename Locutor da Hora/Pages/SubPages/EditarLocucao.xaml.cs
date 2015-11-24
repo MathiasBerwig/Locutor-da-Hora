@@ -49,7 +49,7 @@ namespace Locutor_da_Hora.Pages.SubPages
         public string TituloPagina
         {
             get { return tituloPagina; }
-            set { SetField(ref tituloPagina, value, "TituloPagina"); }
+            set { SetField(ref tituloPagina, value, nameof(TituloPagina)); }
         }
         #endregion
 

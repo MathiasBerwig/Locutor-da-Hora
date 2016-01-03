@@ -40,7 +40,7 @@ namespace Locutor_da_Hora.Pages.SubPages
             get { return locucao; }
             set
             {
-                SetField(ref locucao, value, "Locucao");
+                SetField(ref locucao, value, nameof(Locucao));
                 BtRemoverIcone.Visibility = value?.LocalIcone != null && File.Exists(value.LocalIcone) ? Visibility.Visible : Visibility.Hidden;
                 BtRemoverTrilhaSonora.Visibility = value?.LocalTrilhaSonora != null && File.Exists(value.LocalTrilhaSonora) ? Visibility.Visible : Visibility.Hidden;
             }
@@ -75,7 +75,7 @@ namespace Locutor_da_Hora.Pages.SubPages
                 ImageHandler.Save(new Bitmap(fileName), 125, 125, 100, locucao.LocalIcone);                
 
                 // Notifica alteração
-                locucao.NotifyPropertyChanged("Icone");
+                locucao.NotifyPropertyChanged(nameof(Locucao.Icone));
 
                 // Mostra o botão Remover Ícone
                 BtRemoverIcone.Visibility = Visibility.Visible;
@@ -133,7 +133,7 @@ namespace Locutor_da_Hora.Pages.SubPages
             {
                 File.Delete(locucao.LocalIcone);
                 BtRemoverIcone.Visibility = Visibility.Hidden;
-                locucao.NotifyPropertyChanged("Icone");
+                locucao.NotifyPropertyChanged(nameof(Locucao.Icone));
             }
             catch (Exception)
             {

@@ -33,31 +33,31 @@ namespace Locutor_da_Hora.Model
         public string Nome
         {
             get { return nome; }
-            set { SetField(ref nome, value, "Nome"); }
+            set { SetField(ref nome, value, nameof(Nome)); }
         }
 
         public string Email
         {
             get { return email; }
-            set { SetField(ref email, value, "Email"); }
+            set { SetField(ref email, value, nameof(Email)); }
         }
 
         public string Radio
         {
             get { return radio; }
-            set { SetField(ref radio, value, "Radio"); }
+            set { SetField(ref radio, value, nameof(Radio)); }
         }
 
         public string Cidade
         {
             get { return cidade; }
-            set { SetField(ref cidade, value, "Cidade"); }
+            set { SetField(ref cidade, value, nameof(Cidade)); }
         }
 
         public string Uf
         {
             get { return uf; }
-            set { SetField(ref uf, value, "Uf"); }
+            set { SetField(ref uf, value, nameof(Uf)); }
         }
         #endregion
 
@@ -80,17 +80,17 @@ namespace Locutor_da_Hora.Model
             {
                 switch (columnName)
                 {
-                    case "Nome":
+                    case nameof(Nome):
                         return string.IsNullOrWhiteSpace(Nome) ? Properties.Resources.Validation_Nome : null;
-                    case "Email":
+                    case nameof(Email):
                         return string.IsNullOrWhiteSpace(Email) || !ChecarEmail(Email) ? Properties.Resources.Validation_Email : null;
-                    case "Radio":
+                    case nameof(Radio):
                         return string.IsNullOrEmpty(Radio)
                             ? Properties.Resources.Validation_Radio
                             : null;
-                    case "Cidade":
+                    case nameof(Cidade):
                         return string.IsNullOrEmpty(Cidade) ? Properties.Resources.Validation_Cidade : null;
-                    case "Uf":
+                    case nameof(Uf):
                         return string.IsNullOrEmpty(Uf) ? Properties.Resources.Validation_UF : null;
                     default:
                         return null;

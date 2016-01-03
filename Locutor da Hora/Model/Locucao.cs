@@ -33,10 +33,10 @@ namespace Locutor_da_Hora.Model
 
         public Locucao(SerializationInfo info, StreamingContext ctxt)
         {
-            uniqueName = info.GetString("UniqueName");
-            titulo = info.GetString("Titulo");
-            texto = info.GetString("Texto");
-            readOnly = info.GetBoolean("ReadOnly");
+            uniqueName = info.GetString(nameof(UniqueName));
+            titulo = info.GetString(nameof(Titulo));
+            texto = info.GetString(nameof(Texto));
+            readOnly = info.GetBoolean(nameof(ReadOnly));
         }
         #endregion
 
@@ -46,19 +46,19 @@ namespace Locutor_da_Hora.Model
         public string Titulo
         {
             get { return titulo; }
-            set { SetField(ref titulo, value, "Titulo"); }
+            set { SetField(ref titulo, value, nameof(Titulo)); }
         }
 
         public string Texto
         {
             get { return texto; }
-            set { SetField(ref texto, value, "Texto"); }
+            set { SetField(ref texto, value, nameof(Texto)); }
         }
 
         public bool ReadOnly
         {
             get { return readOnly; }
-            set { SetField(ref readOnly, value, "ReadOnly"); }
+            set { SetField(ref readOnly, value, nameof(ReadOnly)); }
         }
 
         public string LocalIcone => GerenciadorLocucoes.DiretorioLocucoes + UniqueName + ".png";
@@ -117,10 +117,10 @@ namespace Locutor_da_Hora.Model
         #region ISerializable
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            info.AddValue("UniqueName", UniqueName);
-            info.AddValue("Titulo", Titulo);
-            info.AddValue("Texto", Texto);
-            info.AddValue("ReadOnly", ReadOnly);
+            info.AddValue(nameof(UniqueName), UniqueName);
+            info.AddValue(nameof(Titulo), Titulo);
+            info.AddValue(nameof(Texto), Texto);
+            info.AddValue(nameof(ReadOnly), ReadOnly);
         }
         #endregion
     }

@@ -4,6 +4,7 @@
       xmlns:controls="clr-namespace:Locutor_da_Hora.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:p="clr-namespace:Locutor_da_Hora.Properties"
       Title="Boas Vindas"
       MinWidth="1024"
       MinHeight="768"
@@ -32,7 +33,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtSair_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnSair.png"
-                             Text="Sair" />
+                             Text="{x:Static p:Resources.Text_BtSair}" />
 
         <!--  Botão Iniciar  -->
         <controls:MenuButton x:Name="BtIniciar"
@@ -41,7 +42,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtIniciar_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnAvancar.png"
-                             Text="Iniciar" />
+                             Text="{x:Static p:Resources.Text_BtIniciar}" />
 
         <!--  Botão Modo Edição  -->
         <controls:MenuButton x:Name="BtModoEdicao"
@@ -50,7 +51,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtModoEdicao_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnModoEdicao.png"
-                             Text="Editar Áudio" />
+                             Text="{x:Static p:Resources.Text_BtModoEdicao}" />
 
         <!--  Botão Avaliar  -->
         <controls:HorizontalButton x:Name="BtAvaliar"
@@ -59,8 +60,8 @@
                                    VerticalAlignment="Top"
                                    Click="BtAvaliar_Click"
                                    Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnAvaliar.png"
-                                   Text="Avaliar o Aplicativo"
-                                   ToolTip="Ajude a melhorar o Locutor da Hora"
+                                   Text="{x:Static p:Resources.Text_BtAvaliar}"
+                                   ToolTip="{x:Static p:Resources.ToolTip_BtAvaliar}"
                                    Visibility="{Binding Path=PodeAvaliar,
                                                         Converter={StaticResource BoolToVis},
                                                         FallbackValue=Hidden}" />
@@ -72,8 +73,8 @@
                                    VerticalAlignment="Top"
                                    Click="BtAtualizar_Click"
                                    Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnAvaliar.png"
-                                   Text="Atualização Disponível"
-                                   ToolTip="Clique aqui para instalar a versão mais recente do Locutor da Hora"
+                                   Text="{x:Static p:Resources.Text_BtAtualizar}"
+                                   ToolTip="{x:Static p:Resources.ToolTip_BtAtualizar}"
                                    Visibility="{Binding Path=AtualizacaoDisponivel,
                                                         Converter={StaticResource BoolToVis}}" />
     </Grid>

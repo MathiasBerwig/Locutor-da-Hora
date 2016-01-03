@@ -187,6 +187,78 @@ namespace Locutor_da_Hora.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Carregar Faixa.
+        /// </summary>
+        public static string Header_MiCarregar {
+            get {
+                return ResourceManager.GetString("Header_MiCarregar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cortar Trecho.
+        /// </summary>
+        public static string Header_MiCortar {
+            get {
+                return ResourceManager.GetString("Header_MiCortar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salvar Faixa/Trecho.
+        /// </summary>
+        public static string Header_MiMesclarEExportar {
+            get {
+                return ResourceManager.GetString("Header_MiMesclarEExportar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover Trecho.
+        /// </summary>
+        public static string Header_MiRemoverTrecho {
+            get {
+                return ResourceManager.GetString("Header_MiRemoverTrecho", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CIDADE.
+        /// </summary>
+        public static string Label_Usuario_Cidade {
+            get {
+                return ResourceManager.GetString("Label_Usuario_Cidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NOME.
+        /// </summary>
+        public static string Label_Usuario_Nome {
+            get {
+                return ResourceManager.GetString("Label_Usuario_Nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RÁDIO.
+        /// </summary>
+        public static string Label_Usuario_Radio {
+            get {
+                return ResourceManager.GetString("Label_Usuario_Radio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UF.
+        /// </summary>
+        public static string Label_Usuario_UF {
+            get {
+                return ResourceManager.GetString("Label_Usuario_UF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adicionar Locução.
         /// </summary>
         public static string Locucao_Adicionar {
@@ -214,11 +286,272 @@ namespace Locutor_da_Hora.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Atualização Disponível.
+        /// </summary>
+        public static string Text_BtAtualizar {
+            get {
+                return ResourceManager.GetString("Text_BtAtualizar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avaliar o Aplicativo.
+        /// </summary>
+        public static string Text_BtAvaliar {
+            get {
+                return ResourceManager.GetString("Text_BtAvaliar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avançar.
+        /// </summary>
+        public static string Text_BtAvancar {
+            get {
+                return ResourceManager.GetString("Text_BtAvancar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configurações.
+        /// </summary>
+        public static string Text_BtConfiguracoes {
+            get {
+                return ResourceManager.GetString("Text_BtConfiguracoes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editar Locuções.
+        /// </summary>
+        public static string Text_BtEditarLocucoes {
+            get {
+                return ResourceManager.GetString("Text_BtEditarLocucoes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gravar Novamente.
+        /// </summary>
+        public static string Text_BtGravarNovamente {
+            get {
+                return ResourceManager.GetString("Text_BtGravarNovamente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iniciar.
+        /// </summary>
+        public static string Text_BtIniciar {
+            get {
+                return ResourceManager.GetString("Text_BtIniciar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Iniciar Gravação.
+        /// </summary>
+        public static string Text_BtIniciarGravacao {
+            get {
+                return ResourceManager.GetString("Text_BtIniciarGravacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interromper Edição.
+        /// </summary>
+        public static string Text_BtInterromperEdicao {
+            get {
+                return ResourceManager.GetString("Text_BtInterromperEdicao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interromper Gravação.
+        /// </summary>
+        public static string Text_BtInterromperGravacao {
+            get {
+                return ResourceManager.GetString("Text_BtInterromperGravacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Editar Áudio.
+        /// </summary>
+        public static string Text_BtModoEdicao {
+            get {
+                return ResourceManager.GetString("Text_BtModoEdicao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Parar.
+        /// </summary>
+        public static string Text_BtParar {
+            get {
+                return ResourceManager.GetString("Text_BtParar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pausar.
+        /// </summary>
+        public static string Text_BtPausar {
+            get {
+                return ResourceManager.GetString("Text_BtPausar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover Ícone.
+        /// </summary>
+        public static string Text_BtRemoverIcone {
+            get {
+                return ResourceManager.GetString("Text_BtRemoverIcone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover Trilha Sonora.
+        /// </summary>
+        public static string Text_BtRemoverTrilhaSonora {
+            get {
+                return ResourceManager.GetString("Text_BtRemoverTrilhaSonora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reproduzir.
+        /// </summary>
+        public static string Text_BtReproduzir {
+            get {
+                return ResourceManager.GetString("Text_BtReproduzir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sair.
+        /// </summary>
+        public static string Text_BtSair {
+            get {
+                return ResourceManager.GetString("Text_BtSair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salvar.
+        /// </summary>
+        public static string Text_BtSalvar {
+            get {
+                return ResourceManager.GetString("Text_BtSalvar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selecionar.
+        /// </summary>
+        public static string Text_BtSelecionarIcone {
+            get {
+                return ResourceManager.GetString("Text_BtSelecionarIcone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selecionar.
+        /// </summary>
+        public static string Text_BtSelecionarTrilhaSonora {
+            get {
+                return ResourceManager.GetString("Text_BtSelecionarTrilhaSonora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voltar.
+        /// </summary>
+        public static string Text_BtVoltar {
+            get {
+                return ResourceManager.GetString("Text_BtVoltar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voltar ao Início.
+        /// </summary>
+        public static string Text_BtVoltarInicio {
+            get {
+                return ResourceManager.GetString("Text_BtVoltarInicio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Carregando.
+        /// </summary>
+        public static string Text_Carregando {
+            get {
+                return ResourceManager.GetString("Text_Carregando", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fim.
+        /// </summary>
+        public static string Text_FimSelecao {
+            get {
+                return ResourceManager.GetString("Text_FimSelecao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Início.
+        /// </summary>
+        public static string Text_InicioSelecao {
+            get {
+                return ResourceManager.GetString("Text_InicioSelecao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Seleção:.
+        /// </summary>
+        public static string Text_Selecao {
+            get {
+                return ResourceManager.GetString("Text_Selecao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trilha Sonora.
+        /// </summary>
+        public static string Text_TrilhaSonora {
+            get {
+                return ResourceManager.GetString("Text_TrilhaSonora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voz.
+        /// </summary>
+        public static string Text_Voz {
+            get {
+                return ResourceManager.GetString("Text_Voz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ADICIONAR LOCUÇÃO.
         /// </summary>
         public static string Titulo_AdicionarLocucao {
             get {
                 return ResourceManager.GetString("Titulo_AdicionarLocucao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EDITAR GRAVAÇÃO.
+        /// </summary>
+        public static string Titulo_EditarGravacao {
+            get {
+                return ResourceManager.GetString("Titulo_EditarGravacao", resourceCulture);
             }
         }
         
@@ -232,11 +565,110 @@ namespace Locutor_da_Hora.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to IDENTIFICAÇÃO.
+        /// </summary>
+        public static string Titulo_Identificacao {
+            get {
+                return ResourceManager.GetString("Titulo_Identificacao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nova Locução.
         /// </summary>
         public static string Titulo_NovaLocucao {
             get {
                 return ResourceManager.GetString("Titulo_NovaLocucao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SELECIONE UMA LOCUÇÃO.
+        /// </summary>
+        public static string Titulo_SelecioneLocucao {
+            get {
+                return ResourceManager.GetString("Titulo_SelecioneLocucao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TRILHA SONORA.
+        /// </summary>
+        public static string Titulo_TrilhaSonora {
+            get {
+                return ResourceManager.GetString("Titulo_TrilhaSonora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clique aqui para instalar a versão mais recente do Locutor da Hora.
+        /// </summary>
+        public static string ToolTip_BtAtualizar {
+            get {
+                return ResourceManager.GetString("ToolTip_BtAtualizar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aumentar o tamanho do texto.
+        /// </summary>
+        public static string ToolTip_BtAumentarTamanhoTexto {
+            get {
+                return ResourceManager.GetString("ToolTip_BtAumentarTamanhoTexto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ajude a melhorar o Locutor da Hora.
+        /// </summary>
+        public static string ToolTip_BtAvaliar {
+            get {
+                return ResourceManager.GetString("ToolTip_BtAvaliar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diminuir o tamanho do texto.
+        /// </summary>
+        public static string ToolTip_BtDiminuirTamanhoTexto {
+            get {
+                return ResourceManager.GetString("ToolTip_BtDiminuirTamanhoTexto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A cidade onde você mora. Essa é fácil, né?.
+        /// </summary>
+        public static string ToolTip_Usuario_Cidade {
+            get {
+                return ResourceManager.GetString("ToolTip_Usuario_Cidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Como você se chama?.
+        /// </summary>
+        public static string ToolTip_Usuario_Nome {
+            get {
+                return ResourceManager.GetString("ToolTip_Usuario_Nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O nome da rádio que você representa, ou instituição que faz parte, seja como estudante ou profissional..
+        /// </summary>
+        public static string ToolTip_Usuario_Radio {
+            get {
+                return ResourceManager.GetString("ToolTip_Usuario_Radio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O estado onde você mora..
+        /// </summary>
+        public static string ToolTip_Usuario_UF {
+            get {
+                return ResourceManager.GetString("ToolTip_Usuario_UF", resourceCulture);
             }
         }
         

@@ -192,4 +192,148 @@
   <data name="PastaTemporaria_MP3" xml:space="preserve">
     <value>\Gravações</value>
   </data>
+  <data name="Text_BtSair" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="Text_BtAtualizar" xml:space="preserve">
+    <value>Atualização Disponível</value>
+  </data>
+  <data name="Text_BtAvaliar" xml:space="preserve">
+    <value>Avaliar o Aplicativo</value>
+  </data>
+  <data name="Text_BtIniciar" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="Text_BtModoEdicao" xml:space="preserve">
+    <value>Editar Áudio</value>
+  </data>
+  <data name="Text_BtVoltarInicio" xml:space="preserve">
+    <value>Voltar ao Início</value>
+  </data>
+  <data name="ToolTip_BtAtualizar" xml:space="preserve">
+    <value>Clique aqui para instalar a versão mais recente do Locutor da Hora</value>
+  </data>
+  <data name="ToolTip_BtAvaliar" xml:space="preserve">
+    <value>Ajude a melhorar o Locutor da Hora</value>
+  </data>
+  <data name="Header_MiCarregar" xml:space="preserve">
+    <value>Carregar Faixa</value>
+  </data>
+  <data name="Header_MiCortar" xml:space="preserve">
+    <value>Cortar Trecho</value>
+  </data>
+  <data name="Header_MiMesclarEExportar" xml:space="preserve">
+    <value>Salvar Faixa/Trecho</value>
+  </data>
+  <data name="Header_MiRemoverTrecho" xml:space="preserve">
+    <value>Remover Trecho</value>
+  </data>
+  <data name="Text_BtGravarNovamente" xml:space="preserve">
+    <value>Gravar Novamente</value>
+  </data>
+  <data name="Text_BtParar" xml:space="preserve">
+    <value>Parar</value>
+  </data>
+  <data name="Text_BtPausar" xml:space="preserve">
+    <value>Pausar</value>
+  </data>
+  <data name="Text_BtReproduzir" xml:space="preserve">
+    <value>Reproduzir</value>
+  </data>
+  <data name="Text_BtSalvar" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Text_Carregando" xml:space="preserve">
+    <value>Carregando</value>
+  </data>
+  <data name="Text_FimSelecao" xml:space="preserve">
+    <value>Fim</value>
+  </data>
+  <data name="Text_InicioSelecao" xml:space="preserve">
+    <value>Início</value>
+  </data>
+  <data name="Text_Selecao" xml:space="preserve">
+    <value>Seleção:</value>
+  </data>
+  <data name="Text_TrilhaSonora" xml:space="preserve">
+    <value>Trilha Sonora</value>
+  </data>
+  <data name="Text_Voz" xml:space="preserve">
+    <value>Voz</value>
+  </data>
+  <data name="Titulo_EditarGravacao" xml:space="preserve">
+    <value>EDITAR GRAVAÇÃO</value>
+  </data>
+  <data name="Text_BtAvancar" xml:space="preserve">
+    <value>Avançar</value>
+  </data>
+  <data name="Text_BtIniciarGravacao" xml:space="preserve">
+    <value>Iniciar Gravação</value>
+  </data>
+  <data name="Text_BtInterromperGravacao" xml:space="preserve">
+    <value>Interromper Gravação</value>
+  </data>
+  <data name="Text_BtVoltar" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="ToolTip_BtAumentarTamanhoTexto" xml:space="preserve">
+    <value>Aumentar o tamanho do texto</value>
+  </data>
+  <data name="ToolTip_BtDiminuirTamanhoTexto" xml:space="preserve">
+    <value>Diminuir o tamanho do texto</value>
+  </data>
+  <data name="Label_Usuario_Cidade" xml:space="preserve">
+    <value>CIDADE</value>
+  </data>
+  <data name="Label_Usuario_Nome" xml:space="preserve">
+    <value>NOME</value>
+  </data>
+  <data name="Label_Usuario_Radio" xml:space="preserve">
+    <value>RÁDIO</value>
+  </data>
+  <data name="Label_Usuario_UF" xml:space="preserve">
+    <value>UF</value>
+  </data>
+  <data name="Text_BtConfiguracoes" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="Text_BtEditarLocucoes" xml:space="preserve">
+    <value>Editar Locuções</value>
+  </data>
+  <data name="Text_BtInterromperEdicao" xml:space="preserve">
+    <value>Interromper Edição</value>
+  </data>
+  <data name="Titulo_Identificacao" xml:space="preserve">
+    <value>IDENTIFICAÇÃO</value>
+  </data>
+  <data name="ToolTip_Usuario_Cidade" xml:space="preserve">
+    <value>A cidade onde você mora. Essa é fácil, né?</value>
+  </data>
+  <data name="ToolTip_Usuario_Nome" xml:space="preserve">
+    <value>Como você se chama?</value>
+  </data>
+  <data name="ToolTip_Usuario_Radio" xml:space="preserve">
+    <value>O nome da rádio que você representa, ou instituição que faz parte, seja como estudante ou profissional.</value>
+  </data>
+  <data name="ToolTip_Usuario_UF" xml:space="preserve">
+    <value>O estado onde você mora.</value>
+  </data>
+  <data name="Text_BtRemoverIcone" xml:space="preserve">
+    <value>Remover Ícone</value>
+  </data>
+  <data name="Text_BtRemoverTrilhaSonora" xml:space="preserve">
+    <value>Remover Trilha Sonora</value>
+  </data>
+  <data name="Text_BtSelecionarIcone" xml:space="preserve">
+    <value>Selecionar</value>
+  </data>
+  <data name="Text_BtSelecionarTrilhaSonora" xml:space="preserve">
+    <value>Selecionar</value>
+  </data>
+  <data name="Titulo_SelecioneLocucao" xml:space="preserve">
+    <value>SELECIONE UMA LOCUÇÃO</value>
+  </data>
+  <data name="Titulo_TrilhaSonora" xml:space="preserve">
+    <value>TRILHA SONORA</value>
+  </data>
 </root>

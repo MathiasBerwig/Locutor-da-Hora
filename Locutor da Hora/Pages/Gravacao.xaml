@@ -5,6 +5,7 @@
       xmlns:converters="clr-namespace:Locutor_da_Hora.Converters"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:p="clr-namespace:Locutor_da_Hora.Properties"
       Title="Gravação"
       MinWidth="1024"
       MinHeight="768"
@@ -74,7 +75,7 @@
                         Click="BtDiminuirTamanhoTexto_Click"
                         Foreground="{x:Null}"
                         Style="{StaticResource ImageButton}"
-                        ToolTip="Diminuir o tamanho do texto">
+                        ToolTip="{x:Static p:Resources.ToolTip_BtDiminuirTamanhoTexto}">
                     <Button.Background>
                         <ImageBrush ImageSource="/Locutor da Hora;component/Resources/Botões de Gravação/btnDiminuirTamanhoTexto.png" Stretch="Uniform" />
                     </Button.Background>
@@ -91,7 +92,7 @@
                         Click="BtAumentarTamanhoTexto_Click"
                         Foreground="{x:Null}"
                         Style="{StaticResource ImageButton}"
-                        ToolTip="Aumentar o tamanho do texto">
+                        ToolTip="{x:Static p:Resources.ToolTip_BtDiminuirTamanhoTexto}">
                     <Button.Background>
                         <ImageBrush ImageSource="/Locutor da Hora;component/Resources/Botões de Gravação/btnAumentarTamanhoTexto.png" Stretch="Uniform" />
                     </Button.Background>
@@ -119,7 +120,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtIniciarGravacao_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnIniciarGravacao.png"
-                             Text="Iniciar Gravação"
+                             Text="{x:Static p:Resources.Text_BtIniciarGravacao}"
                              Visibility="{Binding Path=PodeGravar,
                                                   Converter={StaticResource BoolToVis}}" />
 
@@ -130,7 +131,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtInterromperGravacao_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnInterromperGravacao.png"
-                             Text="Interromper Gravação"
+                             Text="{x:Static p:Resources.Text_BtInterromperGravacao}"
                              Visibility="{Binding Path=PodeInterromperGravacao,
                                                   Converter={StaticResource BoolToVis},
                                                   FallbackValue=Hidden}" />
@@ -142,7 +143,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtVoltar_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnVoltar.png"
-                             Text="Voltar"
+                             Text="{x:Static p:Resources.Text_BtVoltar}"
                              Visibility="{Binding Path=PodeVoltar,
                                                   Converter={StaticResource BoolToVis}}" />
 
@@ -153,7 +154,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtAvancar_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnAvancar.png"
-                             Text="Avançar"
+                             Text="{x:Static p:Resources.Text_BtAvancar}"
                              Visibility="{Binding Path=PodeAvancar,
                                                   Converter={StaticResource BoolToVis}}" />
 

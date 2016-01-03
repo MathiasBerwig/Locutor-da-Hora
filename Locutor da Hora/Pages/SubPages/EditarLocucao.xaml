@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:p="clr-namespace:Locutor_da_Hora.Properties"
       Title="Editar Locução"
       MinWidth="784"
       MinHeight="480"
@@ -74,7 +75,7 @@
                VerticalAlignment="Bottom"
                HorizontalContentAlignment="Right"
                VerticalContentAlignment="Center"
-               Content="TRILHA SONORA"
+               Content="{x:Static p:Resources.Titulo_TrilhaSonora}"
                FontWeight="Bold"
                Foreground="#FF3A3A3A" />
         <Button x:Name="BtSelecionarTrilhaSonora"
@@ -95,7 +96,7 @@
                        Margin="49,4,10,4"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       Content="Selecionar" />
+                       Content="{x:Static p:Resources.Text_BtSelecionarTrilhaSonora}" />
             </Grid>
         </Button>
         <Button x:Name="BtRemoverTrilhaSonora"
@@ -108,7 +109,7 @@
                 Background="{x:Null}"
                 BorderBrush="{x:Null}"
                 Click="BtRemoverTrilhaSonora_OnClick"
-                Content="Remover Trilha Sonora"
+                Content="{x:Static p:Resources.Text_BtRemoverTrilhaSonora}"
                 FontSize="9"
                 Foreground="Black"
                 Style="{StaticResource ImageButton}" />
@@ -141,7 +142,7 @@
                        Margin="49,4,10,4"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       Content="Selecionar" />
+                       Content="{x:Static p:Resources.Text_BtSelecionarIcone}" />
             </Grid>
         </Button>
         <Button x:Name="BtRemoverIcone"
@@ -154,7 +155,7 @@
                 Background="{x:Null}"
                 BorderBrush="{x:Null}"
                 Click="BtRemoverIcone_OnClick"
-                Content="Remover Ícone"
+                Content="{x:Static p:Resources.Text_BtRemoverIcone}"
                 FontSize="9"
                 Foreground="Black"
                 Style="{StaticResource ImageButton}" />
@@ -189,7 +190,7 @@
                     Click="BtDiminuirTamanhoTexto_Click"
                     Foreground="{x:Null}"
                     Style="{StaticResource ImageButton}"
-                    ToolTip="Diminuir o tamanho do texto">
+                    ToolTip="{x:Static p:Resources.ToolTip_BtDiminuirTamanhoTexto}">
                 <Button.Background>
                     <ImageBrush ImageSource="/Locutor da Hora;component/Resources/Botões de Gravação/btnDiminuirTamanhoTexto.png" Stretch="Uniform" />
                 </Button.Background>
@@ -205,7 +206,7 @@
                     Click="BtAumentarTamanhoTexto_Click"
                     Foreground="{x:Null}"
                     Style="{StaticResource ImageButton}"
-                    ToolTip="Aumentar o tamanho do texto">
+                    ToolTip="{x:Static p:Resources.ToolTip_BtAumentarTamanhoTexto}">
                 <Button.Background>
                     <ImageBrush ImageSource="/Locutor da Hora;component/Resources/Botões de Gravação/btnAumentarTamanhoTexto.png" Stretch="Uniform" />
                 </Button.Background>

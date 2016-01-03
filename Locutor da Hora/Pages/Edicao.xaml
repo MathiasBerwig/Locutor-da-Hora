@@ -5,6 +5,7 @@
       xmlns:converters="clr-namespace:Locutor_da_Hora.Converters"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:p="clr-namespace:Locutor_da_Hora.Properties"
       xmlns:pages="clr-namespace:Locutor_da_Hora.Pages"
       xmlns:svl="clr-namespace:WPFSoundVisualizationLib;assembly=WPFSoundVisualizationLib"
       Title="Edição"
@@ -22,7 +23,7 @@
                       Height="26"
                       Click="MiRemoverTrecho_Click"
                       FontSize="14"
-                      Header="Remover Trecho"
+                      Header="{x:Static p:Resources.Header_MiRemoverTrecho}"
                       IsEnabled="{Binding EngineAtivo.CanCut}">
                 <MenuItem.Icon>
                     <Image Width="16"
@@ -34,7 +35,7 @@
                       Height="26"
                       Click="MiCortar_Click"
                       FontSize="14"
-                      Header="Cortar Trecho"
+                      Header="{x:Static p:Resources.Header_MiCortar}"
                       IsEnabled="{Binding EngineAtivo.CanCut}">
                 <MenuItem.Icon>
                     <Image Width="16"
@@ -47,7 +48,7 @@
                       Height="26"
                       Click="MiCarregar_Click"
                       FontSize="14"
-                      Header="Carregar Faixa">
+                      Header="{x:Static p:Resources.Header_MiCarregar}">
                 <MenuItem.Icon>
                     <Image Width="16"
                            Height="17"
@@ -58,7 +59,7 @@
                       Height="26"
                       Click="MiExportar_Click"
                       FontSize="14"
-                      Header="Salvar Faixa/Trecho"
+                      Header="{x:Static p:Resources.Header_MiMesclarEExportar}"
                       IsEnabled="{Binding EngineAtivo.CanExport}">
                 <MenuItem.Icon>
                     <Image Width="16"
@@ -74,13 +75,13 @@
         </Grid.Background>
 
         <!--  Botão Voltar ao Início  -->
-        <controls:MenuButton x:Name="BtInicio"
+        <controls:MenuButton x:Name="BtVoltarInicio"
                              Margin="0,0,120,50"
                              HorizontalAlignment="Right"
                              VerticalAlignment="Bottom"
-                             Click="BtInicio_Click"
+                             Click="BtVoltarInicio_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnInicio.png"
-                             Text="Voltar ao Início" />
+                             Text="{x:Static p:Resources.Text_BtVoltarInicio}" />
 
 
         <!--  Botão Gravar Novamente  -->
@@ -90,7 +91,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtGravarNovamente_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnGravarNovamente.png"
-                             Text="Gravar Novamente"
+                             Text="{x:Static p:Resources.Text_BtGravarNovamente}"
                              Visibility="{Binding Path=PodeGravarNovamente,
                                                   Converter={StaticResource BoolToVis}}" />
 
@@ -119,7 +120,7 @@
                        VerticalAlignment="Top"
                        HorizontalContentAlignment="Left"
                        VerticalContentAlignment="Center"
-                       Content="Voz"
+                       Content="{x:Static p:Resources.Text_Voz}"
                        FontSize="15"
                        FontWeight="Bold"
                        Foreground="White" />
@@ -140,7 +141,7 @@
                        VerticalAlignment="Top"
                        HorizontalContentAlignment="Left"
                        VerticalContentAlignment="Center"
-                       Content="Trilha Sonora"
+                       Content="{x:Static p:Resources.Text_TrilhaSonora}"
                        FontSize="15"
                        FontWeight="Bold"
                        Foreground="White" />
@@ -170,7 +171,7 @@
                                    HorizontalAlignment="Right"
                                    VerticalAlignment="Center"
                                    VerticalContentAlignment="Center"
-                                   Content="Reproduzir" />
+                                   Content="{x:Static p:Resources.Text_BtReproduzir}" />
                         </Grid>
                     </Button>
 
@@ -196,7 +197,7 @@
                                    HorizontalAlignment="Right"
                                    VerticalAlignment="Bottom"
                                    VerticalContentAlignment="Center"
-                                   Content="Pausar" />
+                                   Content="{x:Static p:Resources.Text_BtPausar}" />
                         </Grid>
                     </Button>
 
@@ -221,7 +222,7 @@
                             <Label Margin="0,0,10,0"
                                    HorizontalAlignment="Right"
                                    VerticalContentAlignment="Center"
-                                   Content="Parar" />
+                                   Content="{x:Static p:Resources.Text_BtParar}" />
                         </Grid>
                     </Button>
 
@@ -233,7 +234,7 @@
                            VerticalAlignment="Bottom"
                            HorizontalContentAlignment="Right"
                            VerticalContentAlignment="Center"
-                           Content="Início"
+                           Content="{x:Static p:Resources.Text_InicioSelecao}"
                            Foreground="#FF3A3A3A" />
                     <svl:TimeEditor x:Name="InicioSelecao"
                                     Width="86"
@@ -252,7 +253,7 @@
                            VerticalAlignment="Bottom"
                            HorizontalContentAlignment="Right"
                            VerticalContentAlignment="Center"
-                           Content="Fim"
+                           Content="{x:Static p:Resources.Text_FimSelecao}"
                            Foreground="#FF3A3A3A" />
                     <svl:TimeEditor x:Name="FimSelecao"
                                     Width="86"
@@ -271,7 +272,7 @@
                            VerticalAlignment="Bottom"
                            HorizontalContentAlignment="Right"
                            VerticalContentAlignment="Center"
-                           Content="Seleção:"
+                           Content="{x:Static p:Resources.Text_Selecao}"
                            FontWeight="Bold"
                            Foreground="#FF3A3A3A" />
                 </Grid>
@@ -320,7 +321,7 @@
                VerticalAlignment="Top"
                HorizontalContentAlignment="Center"
                Background="{x:Null}"
-               Content="EDITAR GRAVAÇÃO"
+               Content="{x:Static p:Resources.Titulo_EditarGravacao}"
                FontSize="30"
                FontWeight="SemiBold"
                Foreground="White"
@@ -333,7 +334,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtExportar_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnSalvar.png"
-                             Text="Salvar">
+                             Text="{x:Static p:Resources.Text_BtSalvar}">
             <controls:MenuButton.Visibility>
                 <MultiBinding Converter="{StaticResource MultiBooleanToVisibility}">
                     <Binding Source="{x:Static converters:ConversionType.AND}" />
@@ -362,7 +363,7 @@
             <Label Margin="0,350,0,265"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   Content="Carregando"
+                   Content="{x:Static p:Resources.Text_Carregando}"
                    FontSize="60" />
         </Grid>
     </Grid>

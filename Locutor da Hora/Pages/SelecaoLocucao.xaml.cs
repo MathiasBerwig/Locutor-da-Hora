@@ -63,7 +63,7 @@ namespace Locutor_da_Hora.Pages
         }
 
         /// <summary>
-        /// Indica que o modo de edição está ativo e se o usuário pode cancelar a edição. Utilizado no Binding da Visibility do botão "BtnInterromperEdicao" e botões de exclusão de locução.
+        /// Indica que o modo de edição está ativo e se o usuário pode cancelar a edição. Utilizado no Binding da Visibility do botão "BtInterromperEdicao" e botões de exclusão de locução.
         /// </summary>
         public bool PodeCancelarEdicao
         {

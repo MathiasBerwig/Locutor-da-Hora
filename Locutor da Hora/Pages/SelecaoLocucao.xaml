@@ -4,6 +4,7 @@
       xmlns:controls="clr-namespace:Locutor_da_Hora.Controls"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:p="clr-namespace:Locutor_da_Hora.Properties"
       MinWidth="1024"
       MinHeight="768"
       d:DesignHeight="768"
@@ -70,7 +71,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtVoltar_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnVoltar.png"
-                             Text="Voltar"
+                             Text="{x:Static p:Resources.Text_BtVoltar}"
                              Visibility="{Binding Path=PodeEditar,
                                                   Converter={StaticResource BoolToVis}}" />
 
@@ -82,18 +83,18 @@
                              VerticalAlignment="Bottom"
                              Click="BtEditarLocucoes_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnEditarPadrao.png"
-                             Text="Editar Locuções"
+                             Text="{x:Static p:Resources.Text_BtEditarLocucoes}"
                              Visibility="{Binding Path=PodeEditar,
                                                   Converter={StaticResource BoolToVis}}" />
 
         <!--  Botão Interromper Edição de Padrão de Gravação  -->
-        <controls:MenuButton x:Name="BtnInterromperEdicao"
+        <controls:MenuButton x:Name="BtInterromperEdicao"
                              Margin="0,0,0,50"
                              HorizontalAlignment="Center"
                              VerticalAlignment="Bottom"
                              Click="BtnGridinterromperEdicao_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnInterromperEdicao.png"
-                             Text="Interromper Edição"
+                             Text="{x:Static p:Resources.Text_BtInterromperEdicao}"
                              Visibility="{Binding Path=PodeCancelarEdicao,
                                                   Converter={StaticResource BoolToVis},
                                                   FallbackValue=Hidden}" />
@@ -105,7 +106,7 @@
                              VerticalAlignment="Bottom"
                              Click="BtConfiguracoes_Click"
                              Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnConfiguracoes.png"
-                             Text="Configurações"
+                             Text="{x:Static p:Resources.Text_BtConfiguracoes}"
                              Visibility="{Binding Path=PodeConfigurar,
                                                   Converter={StaticResource BoolToVis}}" />
 

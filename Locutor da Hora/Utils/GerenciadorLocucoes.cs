@@ -21,6 +21,11 @@ namespace Locutor_da_Hora.Utils
         public ObservableCollection<Locucao> Locucoes { get; private set; }
 
         public static string DiretorioLocucoes => diretorioLocucoes;
+
+        /// <summary>
+        /// Define o nome único para ser usado para identificar o botão Adicionar Locução.
+        /// </summary>
+        public static readonly string ADICIONAR_LOCUCAO = "adicionar_locucao";
         #endregion
 
         #region Métodos Privados
@@ -36,7 +41,7 @@ namespace Locutor_da_Hora.Utils
             }
             catch (Exception)
             {
-                Locucoes = new ObservableCollection<Locucao> { new Locucao("adicionar_locucao") {
+                Locucoes = new ObservableCollection<Locucao> { new Locucao(ADICIONAR_LOCUCAO) {
                     Titulo = Properties.Resources.Locucao_Adicionar,
                     ReadOnly = true } };
             }

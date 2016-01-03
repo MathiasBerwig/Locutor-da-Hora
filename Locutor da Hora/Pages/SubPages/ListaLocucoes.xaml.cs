@@ -59,7 +59,7 @@ namespace Locutor_da_Hora.Pages.SubPages
             Locucao locucao = (sender as Button).Tag as Locucao;            
 
             // Adicionar Locução
-            if (locucao.UniqueName.Equals("adicionar_locucao"))
+            if (locucao.UniqueName.Equals(GerenciadorLocucoes.ADICIONAR_LOCUCAO))
             {
                 // Define o título da página de Edição de Locução
                 EditarLocucao.Instance.TituloPagina = Properties.Resources.Titulo_AdicionarLocucao;
@@ -98,7 +98,7 @@ namespace Locutor_da_Hora.Pages.SubPages
         {
             Locucao locucao = (sender as Button).Tag as Locucao;
 
-            if (locucao.UniqueName.Equals("adicionar_locucao")) return;
+            if (locucao.UniqueName.Equals(GerenciadorLocucoes.ADICIONAR_LOCUCAO)) return;
 
             try
             {

@@ -70,6 +70,8 @@ namespace Locutor_da_Hora.Pages.SubPages
                 EditarLocucao.Instance.Locucao = novaLocucao;
                 // Navega o Frame para a Editar Locução
                 SelecaoLocucao.Instance.FramePrincipal.Navigate(EditarLocucao.Instance);
+                // Registra ação do usuário
+                GoogleAnalyticsTracker.Instance.TrackEvent(Contract.Analytics.INTERACOES, Contract.Analytics.Interacoes.CRIAR_LOCUCAO, null, null);
             }
             else
             // Modo de Edição ativado
@@ -83,6 +85,8 @@ namespace Locutor_da_Hora.Pages.SubPages
                 EditarLocucao.Instance.Locucao = locucao;
                 // Navega o SelecaoLocucao.FramePrincipal para EditarLocucao
                 SelecaoLocucao.Instance.FramePrincipal.Navigate(EditarLocucao.Instance);
+                // Registra ação do usuário
+                GoogleAnalyticsTracker.Instance.TrackEvent(Contract.Analytics.INTERACOES, Contract.Analytics.Interacoes.EDITAR_LOCUCAO, null, null);
             }
             else
             {
@@ -108,11 +112,15 @@ namespace Locutor_da_Hora.Pages.SubPages
             }
             catch
             {
-
+                // TODO: Tratar erros na exclusão de locuções
+                // É necessário apresentar uma mensagem de erro para o usuário?
+                // O usuário possui direitos de escrita na pasta atual?
             }
 
             // Exclui a locução da lista
             GerenciadorLocucoes.Instance.Locucoes.Remove(locucao);
+            // Registra ação do usuário
+            GoogleAnalyticsTracker.Instance.TrackEvent(Contract.Analytics.INTERACOES, Contract.Analytics.Interacoes.EXCLUIR_LOCUCAO, null, null);
         }
 
         private void MouseEnterAnimacao(object sender, RoutedEventArgs e)

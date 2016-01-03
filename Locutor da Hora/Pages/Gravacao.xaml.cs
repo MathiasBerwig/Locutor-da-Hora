@@ -155,7 +155,7 @@ namespace Locutor_da_Hora.Pages
 
                 // Coleta o tempo da gravação
                 temporizador.Stop();
-                GoogleAnalyticsTracker.Instance.TrackTime("Interações", "Gravação", temporizador.ElapsedMilliseconds, locucao.Titulo);
+                GoogleAnalyticsTracker.Instance.TrackTime(Contract.Analytics.INTERACOES, Contract.Analytics.Interacoes.GRAVACAO, temporizador.ElapsedMilliseconds, locucao.Titulo);
 
                 // Incrementa o contador de gravações
                 Properties.Settings.Default.RecordingCount++;

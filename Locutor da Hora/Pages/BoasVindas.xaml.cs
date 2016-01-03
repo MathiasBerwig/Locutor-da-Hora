@@ -80,7 +80,7 @@ namespace Locutor_da_Hora.Pages
             Properties.Settings.Default.PodeAvaliar = false;
             Properties.Settings.Default.Save();
 
-            GoogleAnalyticsTracker.Instance.TrackEvent("Interações", "Avaliar", null, null);
+            GoogleAnalyticsTracker.Instance.TrackEvent(Contract.Analytics.INTERACOES, Contract.Analytics.Interacoes.AVALIAR, null, null);
         }
 
         private void BtAtualizar_Click(object sender, RoutedEventArgs e)

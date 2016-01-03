@@ -28,7 +28,7 @@ namespace Locutor_da_Hora
             // Define o modo de debug            
             DebugMode = CommandLineArguments.Any(s => s.Equals("debug", StringComparison.OrdinalIgnoreCase));
 
-            GoogleAnalyticsTracker.Instance.TrackEvent("Aplicação", "Inicialização", null, null);
+            GoogleAnalyticsTracker.Instance.TrackEvent(Contract.Analytics.APLICACAO, Contract.Analytics.Aplicacao.INICIALIZACAO, null, null);
 
             // Verifica se o computador atende os requisitos mínimos da aplicação. Mensagens de erro ativadas.
             if (!VerificarRequisitos(true)) Current.Shutdown();            
@@ -42,7 +42,7 @@ namespace Locutor_da_Hora
 
         private void App_Exit(object sender, ExitEventArgs e)
         {
-            GoogleAnalyticsTracker.Instance.TrackEvent("Aplicação", "Finalização", null, null);
+            GoogleAnalyticsTracker.Instance.TrackEvent(Contract.Analytics.APLICACAO, Contract.Analytics.Aplicacao.FINALIZACAO, null, null);
 
             // Exclui todos os arquivos da pasta temporária
             LimparPastaTemporaria();

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows;
+using Locutor_da_Hora.Pages.SubPages;
 using Locutor_da_Hora.Windows;
 using Locutor_da_Hora.Utils;
 
@@ -66,6 +67,9 @@ namespace Locutor_da_Hora.Pages
         {
             // Desativa o botão Gravar Novamente
             Edicao.Instance.PodeGravarNovamente = false;
+
+            // Mostra a Edição de Áudio como exibição padrão na tela de edição
+            Edicao.Instance.FramePrincipal.Navigate(EditarAudio.Instance);
 
             // Navega o Frame para a página Edição
             MainWindow.Instance.AbrirPagina(Edicao.Instance);

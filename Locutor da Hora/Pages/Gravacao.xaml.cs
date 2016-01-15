@@ -4,11 +4,11 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using System.Threading.Tasks;
 using System.Windows;
 using Locutor_da_Hora.Utils;
 using Locutor_da_Hora.Audio;
 using Locutor_da_Hora.Model;
+using Locutor_da_Hora.Pages.SubPages;
 using Locutor_da_Hora.Windows;
 
 namespace Locutor_da_Hora.Pages
@@ -59,7 +59,7 @@ namespace Locutor_da_Hora.Pages
             }
         }
 
-        public NAudioEngine EngineTrilhaSonora => Edicao.Instance.EngineTrilhaSonora;
+        public NAudioEngine EngineTrilhaSonora => EditarAudio.Instance.EngineTrilhaSonora;
 
         public bool PodeVoltar
         {
@@ -178,13 +178,16 @@ namespace Locutor_da_Hora.Pages
 
         private void BtAvancar_Click(object sender, RoutedEventArgs e)
         {
-            Edicao.Instance.EngineVoz.OpenFile(localGravacao);
-            Edicao.Instance.EngineAtivo = Edicao.Instance.EngineVoz;
+            EditarAudio.Instance.EngineVoz.OpenFile(localGravacao);
+            EditarAudio.Instance.EngineAtivo = EditarAudio.Instance.EngineVoz;
             // Ativa o botão Gravar Novamente
             Edicao.Instance.PodeGravarNovamente = true;
 
             // Navega o Frame para a Página de Edição
             MainWindow.Instance.AbrirPagina(Edicao.Instance);
+
+            // Mostra a Edição de Áudio como exibição padrão na tela de edição
+            Edicao.Instance.FramePrincipal.Navigate(EditarAudio.Instance);
 
             PodeGravar = true;
             PodeInterromperGravacao = false;

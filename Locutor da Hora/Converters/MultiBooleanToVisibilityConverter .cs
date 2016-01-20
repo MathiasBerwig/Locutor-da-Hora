@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Data;
+using static System.Windows.Visibility;
 
 namespace Locutor_da_Hora.Converters
 {
     /// <summary>
     /// Conversor de múltiplos valores booleanos para Visibility.
-    /// Para o tipo AND: retorna Visibility.Visible se todos os valores forem True; Caso contrário, Visibility.Hidden.
-    /// Para o tipo OR: retorna Visibility.Visible se algum dos valores informados for True; Caso contrário, Visibility.Hidden.
+    /// Para o tipo AND: retorna Visible se todos os valores forem True; Caso contrário, Hidden.
+    /// Para o tipo AND_DEFAULT_COLLAPSED: retorna Visible se todos os valores forem True; Caso contrário, Collapsed.
+    /// Para o tipo OR: retorna Visible se algum dos valores informados for True; Caso contrário, Hidden.
     /// </summary>
     class MultiBooleanToVisibilityConverter : IMultiValueConverter
     {
@@ -18,17 +20,20 @@ namespace Locutor_da_Hora.Converters
         {
             ConversionType conversionType = values.OfType<ConversionType>().First();
 
-            bool visible = conversionType == ConversionType.AND
-                ? values.OfType<bool>().All(x => x.Equals(true))
-                : values.OfType<bool>().Any(x => x.Equals(true));
-
-            return visible ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden;
+            switch (conversionType)
+            {
+                case ConversionType.AND:
+                    return values.OfType<bool>().All(x => x.Equals(true)) ? Visible : Hidden;
+                case ConversionType.AND_DEFAULT_COLLAPSED:
+                    return values.OfType<bool>().All(x => x.Equals(true)) ? Visible : Collapsed;
+                case ConversionType.OR:
+                    return values.OfType<bool>().Any(x => x.Equals(true)) ? Visible : Hidden;
+                default:
+                    return Hidden;
+            }
         }
 
-        public object[] ConvertBack(object value,
-                                    Type[] targetTypes,
-                                    object parameter,
-                                    System.Globalization.CultureInfo culture)
+        public object[] ConvertBack(object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture)
         {
             throw new NotImplementedException();
         }
@@ -36,6 +41,8 @@ namespace Locutor_da_Hora.Converters
 
     public enum ConversionType
     {
-        AND, OR
+        AND,
+        OR,
+        AND_DEFAULT_COLLAPSED
     }
 }

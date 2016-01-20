@@ -45,9 +45,9 @@
                                                   Converter={StaticResource BoolToVis}}" />
 
         <!--  Border Edição de Gravação  -->
-        <Border Height="474"
-                Margin="120,63,120,0"
-                VerticalAlignment="Top"
+        <Border MinWidth="784"
+                MinHeight="474"
+                Margin="120,63,120,234"
                 Background="GhostWhite"
                 BorderThickness="0"
                 CornerRadius="8"

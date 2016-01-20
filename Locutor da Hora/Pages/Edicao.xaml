@@ -44,10 +44,10 @@
                              Visibility="{Binding Path=PodeGravarNovamente,
                                                   Converter={StaticResource BoolToVis}}" />
 
-        <!--  Border Edição de Gravação  -->
+        <!--  Border Edição de Gravação e Envio de E-mail  -->
         <Border MinWidth="784"
                 MinHeight="474"
-                Margin="120,63,120,234"
+                Margin="120,63,120,231"
                 Background="GhostWhite"
                 BorderThickness="0"
                 CornerRadius="8"

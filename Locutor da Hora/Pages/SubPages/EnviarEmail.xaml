@@ -109,7 +109,7 @@
         <Button x:Name="BtEnviarEmail"
                 Width="76"
                 Height="26"
-                Margin="0,0,0,25"
+                Margin="291,0,231,25"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Click="BtEnviarEmail_Click"
@@ -127,6 +127,29 @@
                        VerticalAlignment="Center"
                        VerticalContentAlignment="Center"
                        Content="{x:Static p:Resources.Text_BtEnviarEmail}" />
+            </Grid>
+        </Button>
+        <Button x:Name="BtCancelar"
+                Width="76"
+                Height="26"
+                Margin="210,0,312,25"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Click="BtCancelar_Click">
+            <Grid Width="{Binding Width, ElementName=BtEnviarEmail}">
+                <!--<Image Width="22"
+        			Height="22"
+        			Margin="5,0,0,0"
+        			HorizontalAlignment="Left"
+        			VerticalAlignment="Center"
+        			Source="/Locutor da Hora;component/Resources/Botões de Edição de Locução/imgEmail.png" />-->
+                <Label Width="56"
+                       Height="22"
+                       Margin="0,0,10,0"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       VerticalContentAlignment="Center"
+                       Content="Cancelar" />
             </Grid>
         </Button>
     </Grid>

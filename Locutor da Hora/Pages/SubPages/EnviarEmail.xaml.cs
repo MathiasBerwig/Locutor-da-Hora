@@ -242,5 +242,11 @@ namespace Locutor_da_Hora.Pages.SubPages
             get { throw new NotImplementedException(); }
         }
         #endregion
+
+        private void BtCancelar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            TbEmail.Text = "";
+            Edicao.Instance.FramePrincipal.Navigate(EditarAudio.Instance);
+        }
     }
 }

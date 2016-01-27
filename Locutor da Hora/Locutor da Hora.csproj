@@ -135,8 +135,12 @@
     <Compile Include="Converters\LocucaoBooleanToVisibilityConverter.cs" />
     <Compile Include="Converters\MultiBooleanToVisibilityConverter .cs" />
     <Compile Include="Converters\VolumeRangeConverter.cs" />
+    <Compile Include="Model\MailTemplate.cs" />
     <Compile Include="Pages\SubPages\EditarAudio.xaml.cs">
       <DependentUpon>EditarAudio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SubPages\EnviarEmail.xaml.cs">
+      <DependentUpon>EnviarEmail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.en-US.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -146,6 +150,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Utils\GoogleAnalyticsTracker.cs" />
     <Compile Include="Utils\ImageHandler.cs" />
+    <Compile Include="Utils\MailHelper.cs" />
     <Compile Include="Utils\MessageHelper.cs" />
     <Compile Include="Utils\Splasher.cs" />
     <Compile Include="Converters\TagsToValuesTextConverter.cs" />
@@ -189,6 +194,10 @@
     <Page Include="Pages\SubPages\EditarLocucao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SubPages\EnviarEmail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\SubPages\ListaLocucoes.xaml">
       <SubType>Designer</SubType>
@@ -415,6 +424,12 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Botões de Edição de Locução\imgEmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Botões de Navegação\btnEmail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <UsingTask TaskName="CosturaCleanup" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">

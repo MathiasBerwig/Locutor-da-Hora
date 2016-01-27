@@ -70,6 +70,15 @@ namespace Locutor_da_Hora.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to mail_template.xml.
+        /// </summary>
+        public static string Arquivo_TemplateEmail {
+            get {
+                return ResourceManager.GetString("Arquivo_TemplateEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Arquivos MP3 | *.MP3.
         /// </summary>
         public static string Dialog_Filter_MP3 {
@@ -111,6 +120,15 @@ namespace Locutor_da_Hora.Properties {
         public static string Exception_ArquivoInvalido {
             get {
                 return ResourceManager.GetString("Exception_ArquivoInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Falha ao enviar e-mail! Verifique se o computador está conectado à internet e as credenciais do servidor estão corretas..
+        /// </summary>
+        public static string Exception_EnviarEmail {
+            get {
+                return ResourceManager.GetString("Exception_EnviarEmail", resourceCulture);
             }
         }
         
@@ -223,11 +241,29 @@ namespace Locutor_da_Hora.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Desejo receber novidades sobre o projeto..
+        /// </summary>
+        public static string Label_Checkbox_Newsletter {
+            get {
+                return ResourceManager.GetString("Label_Checkbox_Newsletter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CIDADE.
         /// </summary>
         public static string Label_Usuario_Cidade {
             get {
                 return ResourceManager.GetString("Label_Usuario_Cidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-MAIL.
+        /// </summary>
+        public static string Label_Usuario_Email {
+            get {
+                return ResourceManager.GetString("Label_Usuario_Email", resourceCulture);
             }
         }
         
@@ -327,6 +363,24 @@ namespace Locutor_da_Hora.Properties {
         public static string Text_BtEditarLocucoes {
             get {
                 return ResourceManager.GetString("Text_BtEditarLocucoes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        public static string Text_BtEnviarEmail {
+            get {
+                return ResourceManager.GetString("Text_BtEnviarEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar via E-mail.
+        /// </summary>
+        public static string Text_BtEnviarViaEmail {
+            get {
+                return ResourceManager.GetString("Text_BtEnviarViaEmail", resourceCulture);
             }
         }
         
@@ -565,6 +619,15 @@ namespace Locutor_da_Hora.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ENVIAR E-MAIL.
+        /// </summary>
+        public static string Titulo_EnviarEmail {
+            get {
+                return ResourceManager.GetString("Titulo_EnviarEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to IDENTIFICAÇÃO.
         /// </summary>
         public static string Titulo_Identificacao {
@@ -597,6 +660,15 @@ namespace Locutor_da_Hora.Properties {
         public static string Titulo_TrilhaSonora {
             get {
                 return ResourceManager.GetString("Titulo_TrilhaSonora", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Você deseja receber mensagens com novidades do projeto Locutor da Hora? (Não se preocupe, não enviaremos spam!).
+        /// </summary>
+        public static string ToolTip_Assinar_Newsletter {
+            get {
+                return ResourceManager.GetString("ToolTip_Assinar_Newsletter", resourceCulture);
             }
         }
         
@@ -642,6 +714,15 @@ namespace Locutor_da_Hora.Properties {
         public static string ToolTip_Usuario_Cidade {
             get {
                 return ResourceManager.GetString("ToolTip_Usuario_Cidade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O seu endereço de e-mail para enviarmos a gravação..
+        /// </summary>
+        public static string ToolTip_Usuario_Email {
+            get {
+                return ResourceManager.GetString("ToolTip_Usuario_Email", resourceCulture);
             }
         }
         

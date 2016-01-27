@@ -15,7 +15,7 @@ Na primeira interação, o usuário preenche informações básicas sobre si, qu
 Confira imagens do aplicativo em [nosso blog](http://locutordahora.unijui.edu.br/o-software/).
 
 ## Licença
-O Locutor da Hora é um software gratuito e de código aberto, e está licenciado sob [Creative Commons - Atribuição-NãoComercial-Compartilha Igual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
+O Locutor da Hora é um software gratuito e de código aberto, e está licenciado sob [Creative Commons - Atribuição-NãoComercial-Compartilha Igual 4.0 Internacional](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 Isso significa que você pode:
 * Compartilha-lo: copiar e distribuir o aplicativo em qualquer mídia ou formato
@@ -25,6 +25,28 @@ Desde que respeite:
 * Atribuição: você deve dar os créditos devidos aos autores do projeto, indicar a origem do aplicativo e sua licença, além de explicitar quaisquer mudanças feitas no software.
 * Utilização não comercial: você não pode utilizar esse aplicativo para fins comerciais.
 * Licenciamento: se você adaptar este software, deve distribuí-lo sob a mesma licença que o original.
+
+### Modo Exposição
+Para facilitar o uso em ambientes multi-usuário, como feiras, exposições e escolas, o aplicativo dispões de funcionalidades para envio das gravações via e-mail. Para isso, é necessário que o Locutor da Hora seja iniciado com o parâmetro ``exposicao``.
+
+Para habilitar o envio de e-mails, também é necessário que exista um arquivo chamado ``mail_template.xml`` junto ao arquivo executável. Ele deve possuir a seguinte estrutura:
+
+```xml
+<MailTemplate>
+  <SmtpServer><!-- Endereço do servidor SMTP --></SmtpServer>
+  <PortNumber><!-- Número da porta de comunicação --></PortNumber>
+  <EnableSsl><!-- true ou false, para habilitar ou desabilitar a encriptação SSL --></EnableSsl>
+  <EmailFrom><!-- Campo "De" do e-mail --></EmailFrom>
+  <Username><!-- Nome de usuário do servidor SMTP  --></Username>
+  <Password><!-- Senha do servidor SMTP --></Password>
+  <Subject><!-- Assunto do e-mail --></Subject>
+  <HtmlFile><!-- Caminho completo do arquivo HTML com o corpo da mensagem --></HtmlFile>
+  <BannerImagePath><!-- Caminho completo da imagem utilizada como banner na tela de envio de e-mail --></BannerImagePath>
+  <NewsletterUrl><!-- Caminho completo do formulário de assinatura do MailPoet --></NewsletterUrl>
+  <NewsletterFormId><!-- Identificador do formulário --></NewsletterFormId>
+  <NewsletterListId><!-- Identificador da lista que o usuário será adicionado --></NewsletterListId>
+</MailTemplate>
+```
 
 ## Bibliotecas Utilizadas
  * [Costura.Fody](https://github.com/Fody/Costura) para compactar e embutir dependências externas ao executável.

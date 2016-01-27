@@ -133,6 +133,7 @@ namespace Locutor_da_Hora.Audio
 
             var mixer = new WaveMixerStream32 { AutoStop = true };
 
+            // TODO: Adicionar funcionalidade de Offset
             //var vozOffset = trilhaSonora.TotalTime;
             //var vozOffsetted = new WaveOffsetStream(voz, TimeSpan.FromSeconds(10), TimeSpan.Zero, voz.TotalTime.Subtract(TimeSpan.FromSeconds(30)));
 

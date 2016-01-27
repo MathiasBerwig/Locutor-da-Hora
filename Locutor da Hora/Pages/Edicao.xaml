@@ -55,22 +55,47 @@
             <Frame x:Name="FramePrincipal" Visibility="Visible" />
         </Border>
 
-        <!--  Botão Exportar  -->
-        <controls:MenuButton x:Name="BtSalvar"
-                             Margin="0,0,0,50"
-                             HorizontalAlignment="Center"
-                             VerticalAlignment="Bottom"
-                             Click="BtExportar_Click"
-                             Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnSalvar.png"
-                             Text="{x:Static p:Resources.Text_BtSalvar}">
-            <controls:MenuButton.Visibility>
-                <MultiBinding Converter="{StaticResource MultiBooleanToVisibility}">
-                    <Binding Source="{x:Static converters:ConversionType.AND}" />
-                    <Binding Path="EngineVoz.CanExport" />
-                    <Binding Path="EngineTrilhaSonora.CanExport" />
-                </MultiBinding>
-            </controls:MenuButton.Visibility>
-        </controls:MenuButton>
+        <Grid Margin="0,0,0,50"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Bottom">
+            <!--  Botão Salvar  -->
+            <controls:MenuButton x:Name="BtSalvar"
+                                 HorizontalAlignment="Left"
+                                 VerticalAlignment="Bottom"
+                                 Click="BtExportar_Click"
+                                 Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnSalvar.png"
+                                 Text="{x:Static p:Resources.Text_BtSalvar}">
+                <controls:MenuButton.Visibility>
+                    <MultiBinding Converter="{StaticResource MultiBooleanToVisibility}">
+                        <Binding Source="{x:Static converters:ConversionType.AND}" />
+                        <Binding Path="EngineVoz.CanExport" />
+                        <Binding Path="EngineTrilhaSonora.CanExport" />
+                    </MultiBinding>
+                </controls:MenuButton.Visibility>
+            </controls:MenuButton>
+
+            <!--  Botão Enviar via E-mail  -->
+            <controls:MenuButton x:Name="BtEnviarViaEmail"
+                                 Margin="150,0,0,0"
+                                 HorizontalAlignment="Right"
+                                 VerticalAlignment="Bottom"
+                                 Click="BtEnviarViaEmail_Click"
+                                 Icon="/Locutor da Hora;component/Resources/Botões de Navegação/btnEmail.png"
+                                 Text="{x:Static p:Resources.Text_BtEnviarViaEmail}">
+                <controls:MenuButton.Visibility>
+                    <MultiBinding Converter="{StaticResource MultiBooleanToVisibility}">
+                        <Binding Source="{x:Static converters:ConversionType.AND_DEFAULT_COLLAPSED}" />
+                        <Binding Path="EngineVoz.CanExport" />
+                        <Binding Path="PodeEnviarViaEmail" />
+                        <!--
+                            PodeGravarNovamente indica que o usuário já preencheu o registro anteriormente.
+                            Isso impede que um e-mail seja enviado sem saber o usuário.
+                        -->
+                        <Binding Path="PodeGravarNovamente" />
+                    </MultiBinding>
+                </controls:MenuButton.Visibility>
+            </controls:MenuButton>
+        </Grid>
 
         <!--  Grid "Carregando"  -->
         <Grid x:Name="LoadingGrid"

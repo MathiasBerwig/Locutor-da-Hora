@@ -16,6 +16,7 @@ namespace Locutor_da_Hora
     {
         #region Membros Públicos
         public static bool DebugMode;
+        public static bool ModoExposicao;
         public List<string> CommandLineArguments { get; set; }
         #endregion
 
@@ -27,6 +28,9 @@ namespace Locutor_da_Hora
 
             // Define o modo de debug            
             DebugMode = CommandLineArguments.Any(s => s.Equals("debug", StringComparison.OrdinalIgnoreCase));
+
+            // Define o modo de exposição
+            ModoExposicao = CommandLineArguments.Any(s => s.Equals("exposicao", StringComparison.OrdinalIgnoreCase));
 
             GoogleAnalyticsTracker.Instance.TrackEvent(Contract.Analytics.APLICACAO, Contract.Analytics.Aplicacao.INICIALIZACAO, null, null);
 

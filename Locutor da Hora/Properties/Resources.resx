@@ -336,4 +336,31 @@
   <data name="Titulo_TrilhaSonora" xml:space="preserve">
     <value>TRILHA SONORA</value>
   </data>
+  <data name="Label_Checkbox_Newsletter" xml:space="preserve">
+    <value>Desejo receber novidades sobre o projeto.</value>
+  </data>
+  <data name="Label_Usuario_Email" xml:space="preserve">
+    <value>E-MAIL</value>
+  </data>
+  <data name="ToolTip_Assinar_Newsletter" xml:space="preserve">
+    <value>Você deseja receber mensagens com novidades do projeto Locutor da Hora? (Não se preocupe, não enviaremos spam!)</value>
+  </data>
+  <data name="ToolTip_Usuario_Email" xml:space="preserve">
+    <value>O seu endereço de e-mail para enviarmos a gravação.</value>
+  </data>
+  <data name="Text_BtEnviarViaEmail" xml:space="preserve">
+    <value>Enviar via E-mail</value>
+  </data>
+  <data name="Titulo_EnviarEmail" xml:space="preserve">
+    <value>ENVIAR E-MAIL</value>
+  </data>
+  <data name="Text_BtEnviarEmail" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="Arquivo_TemplateEmail" xml:space="preserve">
+    <value>mail_template.xml</value>
+  </data>
+  <data name="Exception_EnviarEmail" xml:space="preserve">
+    <value>Falha ao enviar e-mail! Verifique se o computador está conectado à internet e as credenciais do servidor estão corretas.</value>
+  </data>
 </root>

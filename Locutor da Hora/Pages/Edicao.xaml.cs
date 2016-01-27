@@ -7,10 +7,10 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using Locutor_da_Hora.Audio;
+using Locutor_da_Hora.Model;
 using Locutor_da_Hora.Pages.SubPages;
 using Locutor_da_Hora.Utils;
 using Locutor_da_Hora.Windows;
-using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
 
 namespace Locutor_da_Hora.Pages
@@ -50,6 +50,11 @@ namespace Locutor_da_Hora.Pages
             get { return podeGravarNovamente; }
             set { SetField(ref podeGravarNovamente, value, nameof(PodeGravarNovamente)); }
         }
+
+        /// <summary>
+        /// Indica se o usuário pode enviar a gravação atual via e-mail. Utilizado no Binding da Visibility do botão "BtEnviarViaEmail".
+        /// </summary>
+        public bool PodeEnviarViaEmail => App.ModoExposicao;
 
         /// <summary>
         /// Indica se existe algum processamento sendo executado no momento. Utilizado no Binding da Visibility do grid "Carregando".
@@ -132,6 +137,17 @@ namespace Locutor_da_Hora.Pages
 
                 Processando = false;
             });
+        }
+
+        private void BtEnviarViaEmail_Click(object sender, RoutedEventArgs e)
+        {
+            // De-serializa o template de envio
+            string mailTemplateFile = Properties.Resources.Arquivo_TemplateEmail;
+            MailTemplate mailTemplate = SerializationHelper.ReadFromXmlFile<MailTemplate>(mailTemplateFile);
+            EnviarEmail.Instance.MailTemplate = mailTemplate;
+
+            EnviarEmail.Instance.CarregarBanner(mailTemplate.BannerImagePath);
+            FramePrincipal.Navigate(EnviarEmail.Instance);
         }
 
         private void BtVoltarInicio_Click(object sender, RoutedEventArgs e)

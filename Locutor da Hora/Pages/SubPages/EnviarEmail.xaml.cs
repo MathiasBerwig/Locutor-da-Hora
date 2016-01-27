@@ -137,70 +137,78 @@ namespace Locutor_da_Hora.Pages.SubPages
         // TODO: Aprimorar método
         private void BtEnviarEmail_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            // Interrompe a reprodução
-            EditarAudio.Instance.EngineTrilhaSonora.Stop();
-            EditarAudio.Instance.EngineVoz.Stop();
-
-            // Obtém os valores de variáveis na thread principal
-            string arquivoTemporario = Environment.CurrentDirectory + Properties.Resources.PastaTemporaria_MP3 + @"\Gravação Campus Future.mp3";
-            string destinatario = TbEmail.Text;
-            string arquivoTrilha = EditarAudio.Instance.EngineTrilhaSonora.FileName;
-            string arquivoVoz = EditarAudio.Instance.EngineVoz.FileName;
-            float volumeTrilha = (float)EditarAudio.Instance.SliderVolumeTrilha.Value;
-            float volumeVoz = (float)EditarAudio.Instance.SliderVolumeVoz.Value;
-            bool assinarNewsletter = CbAssinarNewsletter.IsChecked.Value;
-
-            // Prepara o e-mail com as informações do usuário
-            TagsToValuesTextConverter converter = new TagsToValuesTextConverter();
-            string htmlBody = string.Join("", File.ReadAllLines(MailTemplate.HtmlFile));
-            htmlBody = converter.Convert(htmlBody, null, Identificacao.Instance.Usuario, null).ToString();
-
-            // Remove a mensagem de assinatura de newsletter caso o usuário não tenha marcado o CbAssinarNewsletter
-            if (!assinarNewsletter)
+            bool sucesso = true;
+            try
             {
-                htmlBody = RemoveNewsletterSignature(htmlBody);
-            }
+                // Interrompe a reprodução
+                EditarAudio.Instance.EngineTrilhaSonora.Stop();
+                EditarAudio.Instance.EngineVoz.Stop();
 
-            // Inicia o envio do e-mail em uma thread auxiliar
-            Task.Factory.StartNew(() =>
-            {
-                Edicao.Instance.Processando = true;
+                // Obtém os valores de variáveis na thread principal
+                string arquivoTemporario = Environment.CurrentDirectory + Properties.Resources.PastaTemporaria_MP3 + @"\Gravação Campus Future.mp3";
+                string destinatario = TbEmail.Text;
+                string arquivoTrilha = EditarAudio.Instance.EngineTrilhaSonora.FileName;
+                string arquivoVoz = EditarAudio.Instance.EngineVoz.FileName;
+                float volumeTrilha = (float)EditarAudio.Instance.SliderVolumeTrilha.Value;
+                float volumeVoz = (float)EditarAudio.Instance.SliderVolumeVoz.Value;
+                bool assinarNewsletter = CbAssinarNewsletter.IsChecked.Value;
 
-                try
+                // Prepara o e-mail com as informações do usuário
+                TagsToValuesTextConverter converter = new TagsToValuesTextConverter();
+                string htmlBody = string.Join("", File.ReadAllLines(MailTemplate.HtmlFile));
+                htmlBody = converter.Convert(htmlBody, null, Identificacao.Instance.Usuario, null).ToString();
+
+                // Remove a mensagem de assinatura de newsletter caso o usuário não tenha marcado o CbAssinarNewsletter
+                if (!assinarNewsletter)
                 {
-                    // Verifica se a voz e a trilha sonora estão disponíveis
-                    if (EditarAudio.Instance.EngineVoz.CanExport && EditarAudio.Instance.EngineTrilhaSonora.CanExport)
+                    htmlBody = RemoveNewsletterSignature(htmlBody);
+                }
+
+                // Inicia o envio do e-mail em uma thread auxiliar
+                Task.Factory.StartNew(() =>
+                {
+                    Edicao.Instance.Processando = true;
+
+                // Verifica se a voz e a trilha sonora estão disponíveis
+                if (EditarAudio.Instance.EngineVoz.CanExport && EditarAudio.Instance.EngineTrilhaSonora.CanExport)
                     {
-                        // Mescla as trilhas em uma nova stream
-                        MemoryStream novaStream = Audio.Edicao.MesclarMp3(arquivoTrilha, volumeTrilha, arquivoVoz, volumeVoz);
-                        // Exporta voz e trilha sonora
-                        Audio.Edicao.ExportarMp3(novaStream, arquivoTemporario, true);
+                    // Mescla as trilhas em uma nova stream
+                    MemoryStream novaStream = Audio.Edicao.MesclarMp3(arquivoTrilha, volumeTrilha, arquivoVoz, volumeVoz);
+                    // Exporta voz e trilha sonora
+                    Audio.Edicao.ExportarMp3(novaStream, arquivoTemporario, true);
                     }
                     else
                     {
-                        // Exportar apenas Voz
-                        File.Copy(EditarAudio.Instance.EngineVoz.FileName, arquivoTemporario, true);
+                    // Exportar apenas Voz
+                    File.Copy(EditarAudio.Instance.EngineVoz.FileName, arquivoTemporario, true);
                     }
 
-                    // Envia o e-mail
-                    MailHelper.sendEmail(MailTemplate, htmlBody, destinatario, arquivoTemporario);
+                // Envia o e-mail
+                MailHelper.sendEmail(MailTemplate, htmlBody, destinatario, arquivoTemporario);
 
-                    // Assina o newsletter com o e-mail do usuário
-                    if (assinarNewsletter)
+                // Assina o newsletter com o e-mail do usuário
+                if (assinarNewsletter)
                     {
                         AssinarNewsletter(destinatario, MailTemplate);
                     }
-                }
-                catch (Exception exception)
+                }).ContinueWith(t1 =>
                 {
-                    var erro = Properties.Resources.Exception_EnviarEmail;
-                    GoogleAnalyticsTracker.Instance.TrackException(erro, true);
-                    MessageHelper.ShowError(exception.Message);
-                }
-            }).ContinueWith(t1 =>
+                    Edicao.Instance.Processando = false;
+
+                    if (sucesso)
+                    {
+                        Edicao.Instance.FramePrincipal.Navigate(EditarAudio.Instance);
+                        TbEmail.Text = "";
+                    }
+                }, TaskScheduler.FromCurrentSynchronizationContext());
+            }
+            catch (Exception exception)
             {
-                Edicao.Instance.Processando = false;
-            }, TaskScheduler.FromCurrentSynchronizationContext());
+                sucesso = false;
+                var erro = Properties.Resources.Exception_EnviarEmail;
+                GoogleAnalyticsTracker.Instance.TrackException(erro, true);
+                MessageHelper.ShowError(exception.Message);
+            }
         }
         #endregion
 
